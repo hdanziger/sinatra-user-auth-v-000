@@ -16,6 +16,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/registrations' do
+    binding.pry
     puts params
     @user = User.new(name: params["name"], email: params["email"], password: params["password"])
     session[:id] = @user.id
