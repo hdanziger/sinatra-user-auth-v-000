@@ -18,6 +18,7 @@ class ApplicationController < Sinatra::Base
   post '/registrations' do
     puts params
     @user = User.new(name: params["name"], email: params["email"], password: params["password"])
+    session[:id] = @user.id
     @user.save
     redirect '/users/home'
   end
