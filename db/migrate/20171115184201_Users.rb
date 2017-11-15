@@ -5,3 +5,4 @@ class Users < ActiveRecord::Migration
     t.string :password
   end
 end
+end
