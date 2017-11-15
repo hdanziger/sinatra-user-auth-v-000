@@ -20,6 +20,7 @@ class ApplicationController < Sinatra::Base
     @user.name = params[:name]
     @user.email = params[:email]
     @user.password = params[:password]
+    erb :signup
     redirect '/users/home'
   end
 
